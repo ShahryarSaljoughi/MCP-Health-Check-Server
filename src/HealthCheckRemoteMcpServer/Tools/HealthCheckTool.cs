@@ -8,12 +8,6 @@ namespace HealthCheckRemoteMcpServer.Tools;
 [McpServerToolType]
 public class HealthCheckTool
 {
-    [McpServerTool, Description("Performs a health check and returns 'OK' if the server is healthy.")]
-    public string HealthCheck(string url)
-    {
-        return "OK";
-    }
-
     [McpServerTool(Name = "check_api_status"), Description("Checks the status of an API endpoint by performing an HTTP probe.")]
     public async Task<string> CheckApiStatus(string url)
     {
